@@ -1,0 +1,59 @@
+{
+  "name": "@unlyx/sdk",
+  "version": "1.0.0",
+  "description": "Official Node.js SDK for the Unlyx REST API v1 (account, services, orders, webhooks, usage). Zero dependencies.",
+  "license": "MIT",
+  "author": "Unlyx",
+  "keywords": [
+    "unlyx",
+    "imei",
+    "unlock",
+    "reseller",
+    "gsm",
+    "api",
+    "sdk",
+    "webhooks"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "commonjs",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./lib/index.mjs"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./lib/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "index.d.ts",
+    "index.d.cts",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "node --test test/client.test.mjs test/webhook.test.mjs test/cjs.test.cjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://unlyx.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AktherHossion/unlyx-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AktherHossion/unlyx-node/issues"
+  }
+}
