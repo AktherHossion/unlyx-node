@@ -15,7 +15,7 @@ Official Node.js SDK for the **Unlyx REST API v1** — balance, services, orders
 npm install @unlyx/sdk
 ```
 
-Until the package is on npm, install it from a copy of this folder: `npm install ./sdks/node`.
+npm: https://www.npmjs.com/package/@unlyx/sdk
 
 ## Quick start
 
