@@ -10,5 +10,5 @@ test('require() and import give the same classes', async () => {
   assert.equal(cjs.Client, esm.Client);
   assert.equal(cjs.UnlyxError, esm.UnlyxError);
   assert.equal(cjs.default, cjs);
-  assert.equal(esm.default.VERSION, '1.0.0');
+  assert.equal(esm.default.VERSION, '1.0.1');
 });

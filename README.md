@@ -101,7 +101,7 @@ new Client('https://yourshop.com', key, {
 
 ### Request signing (optional)
 
-If the shop turned on signed requests for your key, pass `signingKeyId` and `signingSecret`. Every request then carries `X-Key-Id`, `X-Timestamp` (unix seconds) and `X-Signature` = hex HMAC-SHA256 of `"{METHOD}\n{path}\n{timestamp}\n{rawBody}"` (path without the query string, e.g. `/api/v1/orders`; empty body for GET).
+If the shop turned on signed requests for your key, pass `signingKeyId` and `signingSecret`. Every request then carries `X-Key-Id`, `X-Timestamp` (unix seconds) and `X-Signature` = hex HMAC-SHA256 of `"{METHOD}\n{path}\n{timestamp}\n{rawBody}"` (path including `/api/v1` plus the canonical query when present — params sorted, each RFC 3986-encoded, joined by `&`; empty body for GET; the client builds this for you).
 
 ## Errors
 

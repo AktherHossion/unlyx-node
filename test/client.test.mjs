@@ -222,7 +222,7 @@ describe('bulk, list, cancel, webhooks, usage, raw', () => {
   test('orders filters', async () => {
     http.json(200, { ok: true, page: 1, per_page: 2, total: 5, data: [orderRow(), orderRow({ reference: 'UX-1002' })] });
     const page = await client().orders({ status: 'completed', since: new Date('2026-10-01T00:00:00Z'), perPage: 2 });
-    assert.equal(http.last.url, 'https://yourshop.com/api/v1/orders?status=completed&since=2026-10-01T00%3A00%3A00.000Z&per_page=2');
+    assert.equal(http.last.url, 'https://yourshop.com/api/v1/orders?per_page=2&since=2026-10-01T00%3A00%3A00.000Z&status=completed');
     assert.equal(page.orders.length, 2);
     assert.equal(page.hasMore, true);
   });
