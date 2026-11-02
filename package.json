@@ -1,6 +1,6 @@
 {
   "name": "@unlyx/sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official Node.js SDK for the Unlyx REST API v1 (account, services, orders, webhooks, usage). Zero dependencies.",
   "license": "MIT",
   "author": "Unlyx",
